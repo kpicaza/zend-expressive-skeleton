@@ -1,0 +1,89 @@
+extends ../layout/layout
+
+block title
+    | Home
+
+block content
+    div(class="jumbotron")
+        h1 Welcome to
+            span(class="zf-green")  zend-expressive
+    p
+        |Congratulations! You have successfully installed the
+        a(href="https://github.com/zendframework/zend-expressive-skeleton" target="_blank")  zend-expressive skeleton application
+        |. This skeleton can serve as a simple starting point for you to begin building your application.
+    p
+        |Expressive builds on zend-stratigility to provide a minimalist PSR-7 middleware framework for PHP.
+
+    div(class="row")
+        div(class="col-md-4")
+            h2
+                a(href="https://docs.zendframework.com/zend-expressive/getting-started/features/" target="_blank")
+                    i(class="fa fa-refresh")
+                    |Agile &amp; Lean
+            p
+                |Expressive is fast, small and perfect for rapid application development, prototyping and api's. You decide how you
+                |extend it and choose the best packages from major framework or standalone projects.
+
+        div(class="col-md-4")
+            h2
+                a(href="https://github.com/zendframework/zend-diactoros" target="_blank")
+                    i(class="fa fa-exchange")
+                    |HTTP Messages
+            p
+                |HTTP messages are the foundation of web development. Web browsers and HTTP clients such as cURL create
+                |HTTP request messages that are sent to a web server, which provides an HTTP response message.
+                |Server-side code receives an HTTP request message, and returns an HTTP response message.
+
+        div(class="col-md-4")
+            h2
+                a(href="https://github.com/zendframework/zend-stratigility" target="_blank")
+                    i(class="fa fa-dot-circle-o")
+                    |Middleware
+            p
+                |Middleware is code that exists between the request and response, and which can take the incoming
+                |request, perform actions based on it, and either complete the response or pass delegation on to the
+                |next middleware in the queue. Your application is easily extended with custom middleware created by
+                |yourself or
+                a(href="https://packagist.org/search/?q=middleware" target="_blank")  others.
+
+    div(class="row")
+        div(class="col-md-4")
+            h2
+                a(href="https://docs.zendframework.com/zend-expressive/features/container/intro/" target="_blank")
+                    i(class="fa fa-cube")
+                    |Containers
+            p
+                |Expressive promotes and advocates the usage of Dependency Injection/Inversion of Control containers
+                |when writing your applications. Expressive supports multiple containers which typehints against
+                a(href="https://github.com/container-interop/container-interop" target="_blank")  container-interop.
+
+        div(class="col-md-4")
+            h2
+                a(href="https://docs.zendframework.com/zend-expressive/features/router/intro/" target="_blank")
+                    i(class="fa fa-plane")
+                    |Routers
+            p
+                |One fundamental feature of zend-expressive is that it provides mechanisms for implementing dynamic
+                |routing, a feature required in most modern web applications. Expressive ships with multiple adapters.
+            if routerName
+                p
+                    a(href=routerDocs target="_blank")
+                        |Get started with
+                        routerName
+                        |.
+
+        div(class="col-md-4")
+            h2
+                a(href="https://docs.zendframework.com/zend-expressive/features/template/twig/" target="_blank")
+                    i(class="fa fa-files-o")
+                    |Templating
+            p
+                |By default, no middleware in Expressive is templated. We do not even provide a default templating
+                |engine, as the choice of templating engine is often very specific to the project and/or organization.
+                |However, Expressive does provide abstraction for templating, which allows you to write middleware that
+                |is engine-agnostic.
+            if templateName
+                p
+                    a(href=templateDocs target="_blank")
+                        |Get started with
+                        templateName

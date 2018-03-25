@@ -40,6 +40,12 @@ return [
                 'zendframework/zend-expressive-twigrenderer'
             ]
         ],
+        'infw/pug' => [
+            'version'   => '^0.1.1',
+            'whitelist' => [
+                'infw/pug'
+            ]
+        ],
         'zendframework/zend-expressive-zendrouter' => [
             'version'   => '^3.0',
             'whitelist' => [
@@ -286,6 +292,26 @@ return [
                         'Resources/templates/zend-view/error.phtml'     => 'src/App/templates/error/error.phtml',
                         'Resources/templates/zend-view/layout.phtml'    => 'src/App/templates/layout/default.phtml',
                         'Resources/templates/zend-view/home-page.phtml' => 'src/App/templates/app/home-page.phtml',
+                    ],
+                    'minimal' => [
+                    ],
+                ],
+                4 => [
+                    'name'     => 'PHP Pug <comment>installs infw/pug</comment>',
+                    'packages' => [
+                        'infw/pug',
+                    ],
+                    'flat' => [
+                        'Resources/templates/infw-pug/404.pug'       => 'templates/error/404.pug',
+                        'Resources/templates/infw-pug/error.pug'     => 'templates/error/error.pug',
+                        'Resources/templates/infw-pug/layout.pug'    => 'templates/layout/default.pug',
+                        'Resources/templates/infw-pug/home-page.pug' => 'templates/app/home-page.pug',
+                    ],
+                    'modular' => [
+                        'Resources/templates/infw-pug/404.pug'       => 'templates/error/404.pug',
+                        'Resources/templates/infw-pug/error.pug'     => 'templates/error/error.pug',
+                        'Resources/templates/infw-pug/layout.pug'    => 'templates/layout/default.pug',
+                        'Resources/templates/infw-pug/home-page.pug' => 'templates/app/home-page.pug',
                     ],
                     'minimal' => [
                     ],
