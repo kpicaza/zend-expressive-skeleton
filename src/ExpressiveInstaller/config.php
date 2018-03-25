@@ -304,14 +304,14 @@ return [
                     'flat' => [
                         'Resources/templates/infw-pug/404.pug'       => 'templates/error/404.pug',
                         'Resources/templates/infw-pug/error.pug'     => 'templates/error/error.pug',
-                        'Resources/templates/infw-pug/layout.pug'    => 'templates/layout/default.pug',
+                        'Resources/templates/infw-pug/layout.pug'    => 'templates/layout/layout.pug',
                         'Resources/templates/infw-pug/home-page.pug' => 'templates/app/home-page.pug',
                         'Resources/templates/infw-pug/templates.global.php' => 'config/autoload/templates.global.php',
                     ],
                     'modular' => [
                         'Resources/templates/infw-pug/404.pug'       => 'templates/error/404.pug',
                         'Resources/templates/infw-pug/error.pug'     => 'templates/error/error.pug',
-                        'Resources/templates/infw-pug/layout.pug'    => 'templates/layout/default.pug',
+                        'Resources/templates/infw-pug/layout.pug'    => 'templates/layout/layout.pug',
                         'Resources/templates/infw-pug/home-page.pug' => 'templates/app/home-page.pug',
                         'Resources/templates/infw-pug/templates.global.php' => 'config/autoload/templates.global.php',
                     ],
