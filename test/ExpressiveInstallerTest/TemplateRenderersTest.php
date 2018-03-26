@@ -11,6 +11,7 @@ namespace ExpressiveInstallerTest;
 
 use ExpressiveInstaller\OptionalPackages;
 use Generator;
+use InFw\Pug;
 use Zend\Expressive;
 use Zend\Stratigility\Middleware;
 
@@ -27,6 +28,7 @@ class TemplateRenderersTest extends OptionalPackagesTestCase
         Expressive\Plates\PlatesRenderer::class => Expressive\Plates\ConfigProvider::class,
         Expressive\Twig\TwigRenderer::class => Expressive\Twig\ConfigProvider::class,
         Expressive\ZendView\ZendViewRenderer::class => Expressive\ZendView\ConfigProvider::class,
+        Pug\PugTemplateRenderer::class => Pug\ConfigProvider::class,
     ];
 
     protected function setUp()
@@ -118,6 +120,7 @@ class TemplateRenderersTest extends OptionalPackagesTestCase
         yield 'plates-minimal'    => [OptionalPackages::INSTALL_MINIMAL, 3, 2, 1, 404, Expressive\Plates\PlatesRenderer::class];
         yield 'twig-minimal'      => [OptionalPackages::INSTALL_MINIMAL, 3, 2, 2, 404, Expressive\Twig\TwigRenderer::class];
         yield 'zend-view-minimal' => [OptionalPackages::INSTALL_MINIMAL, 3, 2, 3, 404, Expressive\ZendView\ZendViewRenderer::class];
+        yield 'php-pug-minimal' => [OptionalPackages::INSTALL_MINIMAL, 3, 2, 4, 404, Pug\PugTemplateRenderer::class];
         // @codingStandardsIgnoreEnd
 
         // @codingStandardsIgnoreStart
@@ -127,6 +130,7 @@ class TemplateRenderersTest extends OptionalPackagesTestCase
             'plates-full'    => [3, 2, 1, 200, Expressive\Plates\PlatesRenderer::class],
             'twig-full'      => [3, 2, 2, 200, Expressive\Twig\TwigRenderer::class],
             'zend-view-full' => [3, 2, 3, 200, Expressive\ZendView\ZendViewRenderer::class],
+            'php-pug-full' => [3, 2, 4, 200, Pug\PugTemplateRenderer::class],
         ];
         // @codingStandardsIgnoreEnd
 

@@ -316,6 +316,7 @@ return [
                         'Resources/templates/infw-pug/templates.global.php' => 'config/autoload/templates.global.php',
                     ],
                     'minimal' => [
+                        'Resources/templates/infw-pug/templates.global.php' => 'config/autoload/templates.global.php',
                     ],
                 ],
             ],
